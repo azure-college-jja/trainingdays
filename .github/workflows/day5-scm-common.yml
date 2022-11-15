@@ -1,5 +1,7 @@
 name: day5-scm-common
 
+# second attempt
+
 on:
   push:
     branches:
