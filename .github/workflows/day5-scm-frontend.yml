@@ -106,7 +106,7 @@ jobs:
         run: echo "::set-output name=name::${{ env.RESOURCE_GROUP_NAME }}-${{ env.GITHUB_REPOSITORY_OWNER_PART }}"
 
       - name: Download bicep artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: bicep
 
@@ -131,7 +131,7 @@ jobs:
           parameters: env=${{ env.ENV_NAME }}
 
       - name: Download SCM Frontend artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: scmfe
           path: ./scmfe
@@ -186,7 +186,7 @@ jobs:
         run: echo "::set-output name=name::${{ env.RESOURCE_GROUP_NAME }}-${{ env.GITHUB_REPOSITORY_OWNER_PART }}"
 
       - name: Download bicep artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: bicep
 
@@ -211,7 +211,7 @@ jobs:
           parameters: env=${{ env.ENV_NAME }}
 
       - name: Download SCM Frontend artifacts
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: scmfe
           path: ./scmfe
