@@ -48,4 +48,5 @@ resource sqlServer 'Microsoft.Sql/servers@2020-11-01-preview' = {
   }
 }
 
+#disable-next-line outputs-should-not-contain-secrets
 output connectionString string = 'Server=tcp:${sqlServer.properties.fullyQualifiedDomainName},1433;Initial Catalog=${sqlDbName};Persist Security Info=False;User ID=${sqlServer.properties.administratorLogin};Password=${sqlUserPwd};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;'
